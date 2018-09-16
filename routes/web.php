@@ -20,6 +20,9 @@ Route::get('testing/{name}', 'TestingController@testing');
 Route::get('/name/{name}/lastname/{lastname?}', function($name, $lastname = ' apellido') {
     return 'Hello i am ' .$name .$lastname;
 });
+
+Route::resource('list', 'ListController');
+
 Route::get('/mifristroute', function () {
     return 'Hello World';
 });
