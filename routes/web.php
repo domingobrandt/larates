@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/name/{name}/lastname/{lastname?}', function($name, $lastname = ' apellido') {
+    return 'Hello i am ' .$name .$lastname;
+});
 Route::get('/mifristroute', function () {
     return 'Hello World';
 });
