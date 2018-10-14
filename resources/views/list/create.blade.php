@@ -1,3 +1,17 @@
+@extends('layouts.app')
+
+@section('title', 'List create')
+
+@section('content')
+<div class="container">
+    <div class="form-group">
+        <label for="">nombre</label>
+        <input type="text" class="form-control">
+    </div>
+    <button type="button" class="btn btn-primary">guardar</button>
+    </div>
+@endsection
+{{--
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,4 +32,4 @@
 <button type="button" class="btn btn-primary">guardar</button>
 </div>
 </body>
-</html>
+</html>--}}
