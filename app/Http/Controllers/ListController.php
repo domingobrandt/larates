@@ -34,7 +34,11 @@ class ListController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->input('name');
+        $listas = new Listas();
+        $listas->name = $request->input('name'); 
+        $listas->save();
+        return 'Saved';
+
     }
 
     /**
