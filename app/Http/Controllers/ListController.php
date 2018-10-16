@@ -3,7 +3,7 @@
 namespace Laratest\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Laratest\Listas;
 class ListController extends Controller
 {
     /**
