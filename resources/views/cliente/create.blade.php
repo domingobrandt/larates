@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'List create')
+@section('title', 'cliente create')
 
 @section('content')
-<form class="form-group" method="POST" action="/list">
+<form class="form-group" method="POST" action="/cliente">
     @csrf
         <div class="form-group">
             <label for="">nombre</label>

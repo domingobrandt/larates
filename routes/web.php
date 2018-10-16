@@ -21,7 +21,7 @@ Route::get('/name/{name}/lastname/{lastname?}', function($name, $lastname = ' ap
     return 'Hello i am ' .$name .$lastname;
 });
 
-Route::resource('list', 'ListController');
+Route::resource('cliente', 'ClienteController');
 
 Route::get('/mifristroute', function () {
     return 'Hello World';

@@ -3,17 +3,17 @@
 namespace Laratest\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laratest\Listas;
-class ListController extends Controller
+use Laratest\Cliente;
+class ClienteController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a clienteing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return 'hola todo bien recourse';
+        return view('cliente.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class ListController extends Controller
      */
     public function create()
     {
-        return view('list.create');
+        return view('cliente.create');
     }
 
     /**
@@ -34,9 +34,9 @@ class ListController extends Controller
      */
     public function store(Request $request)
     {
-        $listas = new Listas();
-        $listas->name = $request->input('name'); 
-        $listas->save();
+        $cliente = new Cliente();
+        $cliente->name = $request->input('name'); 
+        $cliente->save();
         return 'Saved';
 
     }
