@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'cliente create')
+@section('title', 'clientes create')
 
 @section('content')
 <form class="form-group" method="POST" action="/cliente">

@@ -7,13 +7,15 @@ use Laratest\Cliente;
 class ClienteController extends Controller
 {
     /**
-     * Display a clienteing of the resource.
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('cliente.index');
+        $clientes = Cliente::all();
+
+        return view('clientes.index', compact('clientes'));
     }
 
     /**
@@ -23,7 +25,8 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('cliente.create');
+
+        return view('clientes.create');
     }
 
     /**
