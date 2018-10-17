@@ -59,9 +59,10 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $cliente = Cliente::find($id);
+        $cliente = Cliente::where('slug','=',$slug)->firstOrFail();
+        //$cliente = Cliente::find($id);
         return view('clientes.show', compact('cliente'));
     }
 
