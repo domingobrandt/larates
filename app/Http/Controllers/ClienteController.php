@@ -38,7 +38,16 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $cliente = new Cliente();
-        $cliente->name = $request->input('name'); 
+
+        if($request->hasFile('avatar')){
+            $file = $request->file('avatar');
+            $namea = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $namea);
+            
+        }
+
+        $cliente->name = $request->input('name');
+        $cliente->avatar = $namea; 
         $cliente->save();
         return 'Saved';
 
