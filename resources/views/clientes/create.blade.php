@@ -3,14 +3,8 @@
 @section('title', 'clientes create')
 
 @section('content')
-@if($errors->any())
 
-@foreach ($errors->all() as $error)
-<script>window.alert("{{$error}}")</script>
-@endforeach  
-
-@endif
-
+@include('common.errors')
 
 {!! Form::open(['route' => 'cliente.store', 'method' => 'POST', 'files' => true ]) !!}
     <div class="form-group">
