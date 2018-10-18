@@ -59,7 +59,7 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(cliente $cliente )
+    public function show(cliente $cliente)
     {
         //$cliente = Cliente::where('slug','=',$slug)->firstOrFail();
         //$cliente = Cliente::find($id);
@@ -72,9 +72,9 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(cliente $cliente)
     {
-        //
+        return view('clientes.edit', compact('cliente'));
     }
 
     /**
@@ -84,9 +84,17 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, cliente $cliente)
     {
-        //
+        $cliente->fill($request->except('avatar'));
+        if($request->hasFile('avatar')){
+            $file = $request->file('avatar');
+            $namea = time().$file->getClientOriginalName();
+            $cliente->avatar =$namea;
+            $file->move(public_path().'/images/', $namea);
+        }
+        $cliente->save();
+        return 'updated';
     }
 
     /**
