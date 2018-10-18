@@ -51,7 +51,7 @@ class ClienteController extends Controller
         $cliente->avatar = $namea; 
         $cliente->slug = $request->input('name');
         $cliente->save();
-        return 'Saved';
+        return redirect()->route('cliente.index');
 
     }
 
@@ -96,7 +96,8 @@ class ClienteController extends Controller
             $file->move(public_path().'/images/', $namea);
         }
         $cliente->save();
-        return 'updated';
+        return redirect()->route('cliente.show', [$cliente])->with('status','Cliente actualizado correctament');
+        //return 'updated';
     }
 
     /**
@@ -110,6 +111,7 @@ class ClienteController extends Controller
         $file_path = public_path().'/images/'.$cliente->avatar;
         \File::delete($file_path);
         $cliente->delete();
-        return 'deleted';
+        return redirect()->route('cliente.index')->with('status','Cliente Eliminado');
+        //return 'deleted';
     }
 }
