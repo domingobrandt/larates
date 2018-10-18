@@ -37,6 +37,11 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|max:20',
+            'slug'=>'required',
+            'avatar'=>'required|image|mimes:jpeg,bmp,png',
+        ]);
         $cliente = new Cliente();
 
         if($request->hasFile('avatar')){

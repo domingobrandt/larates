@@ -3,6 +3,14 @@
 @section('title', 'clientes create')
 
 @section('content')
+@if($errors->any())
+
+@foreach ($errors->all() as $error)
+<script>window.alert("{{$error}}")</script>
+@endforeach  
+
+@endif
+
 
 {!! Form::open(['route' => 'cliente.store', 'method' => 'POST', 'files' => true ]) !!}
     <div class="form-group">
@@ -21,6 +29,7 @@
     </div>
 
 {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+
 {!! Form::close()!!}
 
 @endsection
