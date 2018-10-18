@@ -4,6 +4,7 @@ namespace Laratest\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Laratest\Cliente;
+use Laratest\Http\Requests\StoreClienteRequest;
 class ClienteController extends Controller
 {
     /**
@@ -35,13 +36,8 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreClienteRequest $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|max:20',
-            'slug'=>'required',
-            'avatar'=>'required|image|mimes:jpeg,bmp,png',
-        ]);
         $cliente = new Cliente();
 
         if($request->hasFile('avatar')){
