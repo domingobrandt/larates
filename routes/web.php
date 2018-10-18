@@ -26,3 +26,11 @@ Route::resource('cliente', 'ClienteController');
 Route::get('/mifristroute', function () {
     return 'Hello World';
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
