@@ -120,6 +120,8 @@ return [
     */
 
     'providers' => [
+      
+
 
         /*
          * Laravel Framework Service Providers...
@@ -159,6 +161,11 @@ return [
         // Laratest\Providers\BroadcastServiceProvider::class,
         Laratest\Providers\EventServiceProvider::class,
         Laratest\Providers\RouteServiceProvider::class,
+        /*
+         * Laravel Collective Service Providers...
+         */
+                Collective\Html\HtmlServiceProvider::class,
+
 
     ],
 
@@ -209,6 +216,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

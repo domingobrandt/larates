@@ -48,6 +48,7 @@ class ClienteController extends Controller
 
         $cliente->name = $request->input('name');
         $cliente->avatar = $namea; 
+        $cliente->slug = $request->input('name');
         $cliente->save();
         return 'Saved';
 
