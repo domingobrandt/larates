@@ -8,5 +8,8 @@
      <h5 class="card-title">{{$cliente->name}}</h5>
      <a href="/cliente/{{$cliente->slug}}/edit" class="btn btn-primary">Editar.</a>
 
+     {!! Form::open([ 'route' => ['cliente.destroy', $cliente->slug], 'method' => 'DELETE']) !!}
+     {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
+ {!! Form::close() !!}
 
 @endsection
