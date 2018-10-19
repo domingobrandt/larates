@@ -13,6 +13,10 @@
         "type": "git",
         "url": "https://github.com/domingobrandt/laratest.git"
       },
+      "repository2": {
+        "type": "git",
+        "url": "https://gitlab.com/domingobrandt/laratest.git"
+      },
     "devDependencies": {
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
