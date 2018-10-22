@@ -24,7 +24,8 @@ class StoreClienteRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:20',
+            'name' =>'required|max:20',
+            'bio' =>'required',
             'slug'=>'required',
             'avatar'=>'required|image|mimes:jpeg,bmp,png',
         ];

@@ -5,6 +5,7 @@ namespace Laratest\Http\Controllers;
 use Illuminate\Http\Request;
 use Laratest\Cliente;
 use Laratest\Http\Requests\StoreClienteRequest;
+
 class ClienteController extends Controller
 {
     /**
@@ -12,13 +13,23 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    
     public function index(Request $request)
     {
+        $name  = $request->get('name');
+    	$slug = $request->get('slug');
+    	$bio   = $request->get('bio');
         //$request->user()->authorizeRoles(['admin','user']);
-
-        $clientes = Cliente::all();
-
-        return view('clientes.index', compact('clientes'));
+        $clientes = Cliente::orderBy('id', 'DESC')
+        ->name($name)
+        ->slug($slug)
+        ->bio($bio)
+        ->paginate(2);
+        //$clientes = Cliente::all();
+        return view('cliente.index', compact('clientes'));
+ 
     }
 
     /**
@@ -29,7 +40,7 @@ class ClienteController extends Controller
     public function create()
     {
 
-        return view('clientes.create');
+        return view('cliente.create');
     }
 
     /**
@@ -50,11 +61,15 @@ class ClienteController extends Controller
         }
 
         $cliente->name = $request->input('name');
+        $cliente->bio = $request->input('bio');
         $cliente->avatar = $namea; 
         $cliente->slug = $request->input('name');
         $cliente->save();
+
+        
         return redirect()->route('cliente.index');
 
+        
     }
 
     /**
@@ -67,7 +82,7 @@ class ClienteController extends Controller
     {
         //$cliente = Cliente::where('slug','=',$slug)->firstOrFail();
         //$cliente = Cliente::find($id);
-        return view('clientes.show', compact('cliente'));
+        return view('cliente.show', compact('cliente'));
     }
 
     /**
