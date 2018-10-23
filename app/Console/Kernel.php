@@ -1,6 +1,6 @@
 <?php
 
-namespace ux-camp\Console;
+namespace Laratest\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

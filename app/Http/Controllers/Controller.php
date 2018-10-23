@@ -1,6 +1,6 @@
 <?php
 
-namespace ux-camp\Http\Controllers;
+namespace Laratest\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

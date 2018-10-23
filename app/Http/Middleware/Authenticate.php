@@ -1,6 +1,6 @@
 <?php
 
-namespace ux-camp\Http\Middleware;
+namespace Laratest\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 

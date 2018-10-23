@@ -1,6 +1,6 @@
 <?php
 
-namespace ux-camp\Providers;
+namespace Laratest\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;

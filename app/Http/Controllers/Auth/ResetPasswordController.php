@@ -1,8 +1,8 @@
 <?php
 
-namespace ux-camp\Http\Controllers\Auth;
+namespace Laratest\Http\Controllers\Auth;
 
-use ux-camp\Http\Controllers\Controller;
+use Laratest\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller

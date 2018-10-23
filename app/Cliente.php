@@ -1,6 +1,6 @@
 <?php
 
-namespace ux-camp;
+namespace Laratest;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ux-camp;
+namespace Laratest;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -11,7 +11,7 @@ class User extends Authenticatable
     use Notifiable;
 
     public function roles(){
-        return $this->belongsToMany('ux-camp\Role');
+        return $this->belongsToMany('Laratest\Role');
     }
     
     public function authorizeRoles($roles){

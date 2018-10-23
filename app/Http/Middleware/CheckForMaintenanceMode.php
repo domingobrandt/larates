@@ -1,6 +1,6 @@
 <?php
 
-namespace ux-camp\Http\Middleware;
+namespace Laratest\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode as Middleware;
 

@@ -104,7 +104,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY','base64:Ag+18x7bL36+xwyPRkP3SyUBGomSBVT5JSqzn6C4a9Q='),
+    'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -156,11 +156,11 @@ return [
         /*
          * Application Service Providers...
          */
-        ux-camp\Providers\AppServiceProvider::class,
-        ux-camp\Providers\AuthServiceProvider::class,
-        // ux-camp\Providers\BroadcastServiceProvider::class,
-        ux-camp\Providers\EventServiceProvider::class,
-        ux-camp\Providers\RouteServiceProvider::class,
+        Laratest\Providers\AppServiceProvider::class,
+        Laratest\Providers\AuthServiceProvider::class,
+        // Laratest\Providers\BroadcastServiceProvider::class,
+        Laratest\Providers\EventServiceProvider::class,
+        Laratest\Providers\RouteServiceProvider::class,
         /*
          * Laravel Collective Service Providers...
          */

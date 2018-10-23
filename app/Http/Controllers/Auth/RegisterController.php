@@ -1,9 +1,9 @@
 <?php
 
-namespace ux-camp\Http\Controllers\Auth;
+namespace Laratest\Http\Controllers\Auth;
 
-use ux-camp\User;
-use ux-camp\Http\Controllers\Controller;
+use Laratest\User;
+use Laratest\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \ux-camp\User
+     * @return \Laratest\User
      */
     protected function create(array $data)
     {

@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    ux-camp\Http\Kernel::class
+    Laratest\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    ux-camp\Console\Kernel::class
+    Laratest\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    ux-camp\Exceptions\Handler::class
+    Laratest\Exceptions\Handler::class
 );
 
 /*

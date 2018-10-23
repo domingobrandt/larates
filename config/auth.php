@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => ux-camp\User::class,
+            'model' => Laratest\User::class,
         ],
 
         // 'users' => [
