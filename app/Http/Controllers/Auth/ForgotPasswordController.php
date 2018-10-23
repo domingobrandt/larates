@@ -1,8 +1,8 @@
 <?php
 
-namespace Laratest\Http\Controllers\Auth;
+namespace ux-camp\Http\Controllers\Auth;
 
-use Laratest\Http\Controllers\Controller;
+use ux-camp\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

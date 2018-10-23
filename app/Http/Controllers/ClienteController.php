@@ -1,10 +1,10 @@
 <?php
 
-namespace Laratest\Http\Controllers;
+namespace ux-camp\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laratest\Cliente;
-use Laratest\Http\Requests\StoreClienteRequest;
+use ux-camp\Cliente;
+use ux-camp\Http\Requests\StoreClienteRequest;
 
 class ClienteController extends Controller
 {

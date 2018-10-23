@@ -1,7 +1,7 @@
 <?php
-namespace Laratest\Http\Controllers;
+namespace ux-camp\Http\Controllers;
 
-use Laratest\Http\Controllers\Controller;
+use ux-camp\Http\Controllers\Controller;
 
 class TestingController extends Controller {
 

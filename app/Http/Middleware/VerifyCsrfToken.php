@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Http\Middleware;
+namespace ux-camp\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
 

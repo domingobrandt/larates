@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Http\Middleware;
+namespace ux-camp\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;

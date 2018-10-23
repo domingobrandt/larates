@@ -156,11 +156,11 @@ return [
         /*
          * Application Service Providers...
          */
-        Laratest\Providers\AppServiceProvider::class,
-        Laratest\Providers\AuthServiceProvider::class,
-        // Laratest\Providers\BroadcastServiceProvider::class,
-        Laratest\Providers\EventServiceProvider::class,
-        Laratest\Providers\RouteServiceProvider::class,
+        ux-camp\Providers\AppServiceProvider::class,
+        ux-camp\Providers\AuthServiceProvider::class,
+        // ux-camp\Providers\BroadcastServiceProvider::class,
+        ux-camp\Providers\EventServiceProvider::class,
+        ux-camp\Providers\RouteServiceProvider::class,
         /*
          * Laravel Collective Service Providers...
          */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Providers;
+namespace ux-camp\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Laratest\Http\Controllers';
+    protected $namespace = 'ux-camp\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Http\Middleware;
+namespace ux-camp\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Providers;
+namespace ux-camp\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Laratest\Model' => 'Laratest\Policies\ModelPolicy',
+        'ux-camp\Model' => 'ux-camp\Policies\ModelPolicy',
     ];
 
     /**

@@ -25,7 +25,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "Laratest\\": "app/"
+            "ux-camp\\": "app/"
         }
     },
     "autoload-dev": {
