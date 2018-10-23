@@ -1,5 +1,5 @@
 <?php
-$DATABASE_URL=parse_url('ec2-54-83-49-109.compute-1.amazonaws.com');
+$DATABASE_URL=parse_url('ec2-107-20-211-10.compute-1.amazonaws.com');
 return [
 
     /*
@@ -56,11 +56,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'ec2-54-83-49-109.compute-1.amazonaws.com'),
+            'host' => env('DB_HOST', 'ec2-107-20-211-10.compute-1.amazonaws.com'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'd5l8us3pp1s1gs'),
-            'username' => env('DB_USERNAME', 'oflrqiljkjgtjh'),
-            'password' => env('DB_PASSWORD', '87f175fff49872066ceca160dcff68787de9418c2343b22e9ca9af5b8a22bb70'),
+            'database' => env('DB_DATABASE', 'd93ql45kc5god3'),
+            'username' => env('DB_USERNAME', 'cxidhtskqaeghl'),
+            'password' => env('DB_PASSWORD', 'd5e02f67fc9546675430d04bb0ace41922bf64db11687cc28372317a5bc9fc52'),
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
