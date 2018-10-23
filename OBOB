@@ -1,0 +1,39 @@
+[33m43d3f5a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mheroku/master[m[33m)[m config 4
+[33m2de5a37[m config 3
+[33mceac94b[m config 2
+[33m3c72a5d[m config 1
+[33mbaed451[m database config
+[33md695960[m 3 commit
+[33md83fb13[m second commit
+[33m6407c30[m[33m ([m[1;31morigin/master[m[33m, [m[1;31mgitlab/master[m[33m)[m filter, query scope, pagination
+[33mefde0f8[m fix login rederectto client
+[33ma3d1e5b[m RoleUser implementation
+[33m6dd84db[m RoleUser logic val
+[33md54b95b[m Seeder
+[33mc458bc6[m Roles&UserModelMigrations
+[33m24e0cca[m Authentication
+[33m11fbfce[m Refactor Code Views blade
+[33mcec200a[m Session Data
+[33m3b3843d[m HTTP Responses
+[33m4e56aa4[m delete client
+[33m147e959[m FormRequest
+[33m0e428ee[m Validation
+[33maff241b[m subViews
+[33mc1f429e[m Laravel Collective
+[33m0391355[m client update
+[33mab5eead[m slugImplicit Binding
+[33m26e2b06[m slug
+[33m4f3dfee[m show id
+[33mde77436[m view client
+[33m8787f9f[m upload file avatar
+[33m16553a2[m read client list
+[33m0853b61[m mysql & change list for client
+[33meab546f[m mysql
+[33m8f41d60[m migrate problem
+[33m912fbd7[m Requests
+[33ma623282[m blade
+[33ma3e0030[m views
+[33mc87ef9e[m Resource controller
+[33m1c5496d[m controllers with routes
+[33m3bfc88c[m routes
+[33m9fcb9b4[m upload projects

@@ -7,7 +7,7 @@
         <div class="container-fluid">
 
         <h4> Busqueda de Cliente</h4>
-        {{ Form::open(['route' => 'cliente', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
+        {{ Form::open(['route' => 'cliente.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
         <div class="form-group">
             {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Name']) }}
         </div>

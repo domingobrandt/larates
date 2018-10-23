@@ -18,8 +18,9 @@ Route::get('/cliente', 'ClienteController@index')->name('cliente');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('cliente', 'ClienteController');

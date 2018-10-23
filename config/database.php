@@ -1,5 +1,11 @@
 <?php
-$DATABASE_URL=parse_url('ec2-107-20-211-10.compute-1.amazonaws.com');
+
+$url = parse_url(getenv("DATABASE_URL"));
+$host = $url["host"]?? null;
+$username = $url["user"]??null;
+$password = $url["pass"]??null;
+$database = substr($url["host"], 1)??null;
+
 return [
 
     /*
@@ -13,7 +19,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'pgsql_production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,6 +59,16 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+        'pgsql_production' => [
+            'driver' => 'pgsql',
+            'host' => $host,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+        ],
 
         'pgsql' => [
             'driver' => 'pgsql',
@@ -66,8 +82,6 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
-
-
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST', 'localhost'),
