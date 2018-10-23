@@ -1,5 +1,5 @@
 <?php
-
+$DATABASE_URL=parse_url('ec2-54-83-49-109.compute-1.amazonaws.com');
 return [
 
     /*
