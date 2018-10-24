@@ -11,7 +11,7 @@ class User extends Authenticatable
     use Notifiable;
 
     public function roles(){
-        return $this->belongsToMany('Laratest\Role');
+        return $this->belongsToMany('App\Role');
     }
     
     public function authorizeRoles($roles){
