@@ -1,10 +1,6 @@
 <?php
 
-$url = parse_url(getenv("DATABASE_URL"));
-$host = $url["host"]?? null;
-$username = $url["user"]??null;
-$password = $url["pass"]??null;
-$database = substr($url["host"], 1)??null;
+$DATABASE_URL=parse_url('postgres://ogessjoimszoxm:8bf85c49198516a7ef6b3643a62b03b7612b289ba7e7b2155edc3fbf1de75934@ec2-54-243-187-30.compute-1.amazonaws.com:5432/d9sgvs7enuk9fs');
 
 return [
 
@@ -19,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql_production'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -59,29 +55,21 @@ return [
             'strict' => true,
             'engine' => null,
         ],
-        'pgsql_production' => [
-            'driver' => 'pgsql',
-            'host' => $host,
-            'database' => $database,
-            'username' => $username,
-            'password' => $password,
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-        ],
+
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'ec2-107-20-211-10.compute-1.amazonaws.com'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'd93ql45kc5god3'),
-            'username' => env('DB_USERNAME', 'cxidhtskqaeghl'),
-            'password' => env('DB_PASSWORD', 'd5e02f67fc9546675430d04bb0ace41922bf64db11687cc28372317a5bc9fc52'),
+            'host' => $DATABASE_URL["host"],
+            'port' => $DATABASE_URL["port"],
+            'database' => ltrim($DATABASE_URL["path"], "/"),
+            'username' => $DATABASE_URL["user"],
+            'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => 'require',
         ],
+
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST', 'localhost'),
