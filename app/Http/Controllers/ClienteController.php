@@ -124,6 +124,7 @@ class ClienteController extends Controller
      */
     public function destroy(cliente $cliente)
     {
+        $cliente->user()->authorizeRoles(['admin']);
         $file_path = public_path().'/images/'.$cliente->avatar;
         \File::delete($file_path);
         $cliente->delete();
