@@ -35,7 +35,6 @@
                             <td>{{ $cliente->slug }}</td>
                             <td>{{ $cliente->bio }}</td>
                             <td><a href="/cliente/{{$cliente->slug}}" class="btn btn-primary">More..</a></td>
-
                         </tr>
                         @endforeach
                     </tbody>
