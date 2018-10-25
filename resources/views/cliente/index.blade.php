@@ -20,12 +20,11 @@
             <button type="submit" class="btn btn-default">Find
                 <span class="glyphicon glyphicon-search"></span>
             </button>
-            <button type="button" href="https://ux-camp.herokuapp.com/cliente/create" class="btn btn-default">Crear
-                </button>
-                <button href="/cliente/create" class="btn btn-danger">Crear
-                </button>
+     
         </div>
     {{ Form::close() }}
+    <button href="/cliente/create" class="btn btn-danger">Crear
+    </button>
 
 </div>
         <div class="col-md-8">

@@ -85,8 +85,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://ux-camp.herokuapp.com/cliente">Lista de Clientes</a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="/cliente">Lista de Clientes</a>
+                    <a href="/card">cards</a>
                     <a href="https://laravel-news.com">News</a>
                 </div>
             </div>
