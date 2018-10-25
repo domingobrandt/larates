@@ -62,12 +62,12 @@ class ClienteController extends Controller
         $cliente->name = $request->input('name');
         $cliente->bio = $request->input('bio');
         $cliente->avatar = $namea; 
-        $cliente->slug = $request->input('name');
+        $cliente->slug = $request->input('slug');
         $cliente->save();
 
         
         return redirect()->route('cliente.index');
-        return view('cliente.card', $request);
+        //return view('cliente.card', $request);
 
     }
 
