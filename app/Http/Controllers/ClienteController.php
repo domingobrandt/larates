@@ -29,7 +29,8 @@ class ClienteController extends Controller
         ->paginate(2);
         //$clientes = Cliente::all();
         return view('cliente.index', compact('clientes'));
- 
+        return view('cliente.card', compact('clientes'));
+
     }
 
     /**
@@ -67,7 +68,6 @@ class ClienteController extends Controller
 
         
         return redirect()->route('cliente.index');
-        //return view('cliente.card', $request);
 
     }
 
@@ -93,7 +93,7 @@ class ClienteController extends Controller
      */
     public function edit(cliente $cliente)
     {
-        return view('clientes.edit', compact('cliente'));
+        return view('cliente.edit', compact('cliente'));
     }
 
     /**
