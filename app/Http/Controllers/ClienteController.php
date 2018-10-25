@@ -26,7 +26,7 @@ class ClienteController extends Controller
         ->name($name)
         ->slug($slug)
         ->bio($bio)
-        ->paginate(2);
+        ->paginate(10);
         //$clientes = Cliente::all();
         return view('cliente.index', compact('clientes'));
 
@@ -37,16 +37,10 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function card()
-    
+
+    public function create(Request $request)
     {
-
-        return view('cliente.card');
-    }
-
-    public function create()
-    {
-
+        $request->user()->authorizeRoles(['admin']);
         return view('cliente.create');
     }
 
