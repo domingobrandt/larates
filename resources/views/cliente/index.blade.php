@@ -3,9 +3,8 @@
 @section('title', 'clients')
 
 @section('content')
-
+@include('layouts.sidebar')
         <div class="container-fluid">
-
         <h4> Busqueda de Cliente</h4>
         {{ Form::open(['route' => 'cliente.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
         <div class="form-group">
