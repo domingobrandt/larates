@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
         <div class="row">
-            
+                @foreach($clientes as $cliente)
           <div class="col-sm">
                 <div class="card text-center" style="width: 18rem; margin-top: 50px;">
                     <img style=" margin-top: 25px;
@@ -17,4 +17,7 @@
                     </div>
                  </div>
             </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
