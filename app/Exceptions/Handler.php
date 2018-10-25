@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Exceptions;
+namespace Uxcamp\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

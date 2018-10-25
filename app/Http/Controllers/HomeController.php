@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Http\Controllers;
+namespace Uxcamp\Http\Controllers;
 
 use Illuminate\Http\Request;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Http\Controllers\Auth;
+namespace Uxcamp\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

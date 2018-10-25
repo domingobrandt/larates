@@ -1,12 +1,12 @@
 <?php
 
-namespace Laratest;
+namespace Uxcamp;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
     public function roles(){
-        return $this->belongsToMany('Laratest\Role');
+        return $this->belongsToMany('Uxcamp\Role');
     }
 }

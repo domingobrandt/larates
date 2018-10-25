@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Laratest\User::class,
+        'model' => Uxcamp\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

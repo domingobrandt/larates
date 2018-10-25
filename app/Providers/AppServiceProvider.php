@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Providers;
+namespace Uxcamp\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

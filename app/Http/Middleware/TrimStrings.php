@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Http\Middleware;
+namespace Uxcamp\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\TrimStrings as Middleware;
 

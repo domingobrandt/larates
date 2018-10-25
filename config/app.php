@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Uxcamp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -156,11 +156,11 @@ return [
         /*
          * Application Service Providers...
          */
-        Laratest\Providers\AppServiceProvider::class,
-        Laratest\Providers\AuthServiceProvider::class,
-        // Laratest\Providers\BroadcastServiceProvider::class,
-        Laratest\Providers\EventServiceProvider::class,
-        Laratest\Providers\RouteServiceProvider::class,
+        Uxcamp\Providers\AppServiceProvider::class,
+        Uxcamp\Providers\AuthServiceProvider::class,
+        // Uxcamp\Providers\BroadcastServiceProvider::class,
+        Uxcamp\Providers\EventServiceProvider::class,
+        Uxcamp\Providers\RouteServiceProvider::class,
         /*
          * Laravel Collective Service Providers...
          */

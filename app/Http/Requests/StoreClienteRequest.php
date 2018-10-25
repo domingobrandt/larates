@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratest\Http\Requests;
+namespace Uxcamp\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

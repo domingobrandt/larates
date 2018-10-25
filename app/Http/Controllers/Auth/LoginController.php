@@ -1,8 +1,8 @@
 <?php
 
-namespace Laratest\Http\Controllers\Auth;
+namespace Uxcamp\Http\Controllers\Auth;
 
-use Laratest\Http\Controllers\Controller;
+use Uxcamp\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
