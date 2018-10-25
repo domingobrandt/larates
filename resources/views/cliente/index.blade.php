@@ -18,7 +18,11 @@
             {{ Form::text('bio', null, ['class' => 'form-control', 'placeholder' => 'Bio']) }}
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-default">Ir
+            <button type="submit" class="btn btn-default">Find
+            <button type="submit" class="btn btn-default" href="https://ux-camp.herokuapp.com/cliente/create">crear
+            {!! Html::linkRoute('cliente.create','('class=>'btn btn-danger btn-block')!!}
+            {!! Form::submit('Crear un Cliente', ['class' => 'btn btn-primary']) !!}
+
                 <span class="glyphicon glyphicon-search"></span>
             </button>
         </div>
