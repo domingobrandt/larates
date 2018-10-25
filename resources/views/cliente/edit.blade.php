@@ -6,7 +6,7 @@
 
 {!! Form::model($cliente, ['route' => ['cliente.update', $cliente], 'method' => 'PUT', 'files' => true])!!}
 
-@include('clientes.form')
+@include('cliente.form')
 
 {!! Form::submit('Actualizar', ['class' => 'btn btn-primary']) !!}
 {!! Form::close() !!}
