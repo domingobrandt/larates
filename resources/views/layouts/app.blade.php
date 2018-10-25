@@ -36,7 +36,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                            <li class="nav-item">
+                                    <a class="nav-link" href="/cliente/create">Crear CLiente</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="">aqui 2</a>
+                                    </div>
+                            </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
