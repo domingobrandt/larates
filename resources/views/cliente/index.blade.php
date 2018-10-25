@@ -23,8 +23,6 @@
      
         </div>
     {{ Form::close() }}
-    <button href="/cliente/create" class="btn btn-danger">Crear
-    </button>
 
 </div>
         <div class="col-md-8">

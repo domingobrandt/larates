@@ -66,7 +66,7 @@ class ClienteController extends Controller
         $cliente->save();
 
         
-        return redirect()->route('cliente.index','cliente.card');
+        return redirect()->route('cliente.index && cliente.card');
 
         
     }
