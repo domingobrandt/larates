@@ -3,7 +3,7 @@
 @section('title', 'clients')
 
 @section('content')
-@include('layouts.sidebar')
+
         <div class="container-fluid">
         <h4> Busqueda de Cliente</h4>
         {{ Form::open(['route' => 'cliente.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
@@ -18,11 +18,12 @@
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-default">Find
-            <button type="submit" class="btn btn-default" href="https://ux-camp.herokuapp.com/cliente/create">crear
-            {!! Form::submit('Crear un Cliente', ['class' => 'btn btn-primary']) !!}
-
                 <span class="glyphicon glyphicon-search"></span>
             </button>
+            <button type="button" href="https://ux-camp.herokuapp.com/cliente/create" class="btn btn-default">Crear
+                </button>
+                <button href="/cliente/create" class="btn btn-danger">Crear
+                </button>
         </div>
     {{ Form::close() }}
 
