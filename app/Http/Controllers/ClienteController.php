@@ -67,7 +67,7 @@ class ClienteController extends Controller
 
         
         return redirect()->route('cliente.index');
-        return view('cliente.card');
+        return view('cliente.card', $request);
 
     }
 
