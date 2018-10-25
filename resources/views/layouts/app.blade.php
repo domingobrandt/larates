@@ -40,7 +40,7 @@
                                     <a class="nav-link" href="/cliente/create">Crear CLiente</a>
                             </li>
                             <li class="nav-item">
-                                    <a class="nav-link" href="/card">Card </a>
+                                    <a class="nav-link" href="cliente/card">Card </a>
                             </li>
                     </ul>
 

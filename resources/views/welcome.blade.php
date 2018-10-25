@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="/cliente">Lista de Clientes</a>
-                    <a href="/card">cards</a>
+                    <a href="cliente/card">cards</a>
                     <a href="https://laravel-news.com">News</a>
                 </div>
             </div>
