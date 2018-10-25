@@ -25,13 +25,12 @@
     {{ Form::close() }}
 
 </div>
-
         <div class="col-md-8">
-                <table>
+            <table class="table">
                     <tbody>
                             @foreach($clientes as $cliente)
                         <tr>
-                                <td>{{ $cliente->id }}</td>
+                            <td>{{ $cliente->id }}</td>
                             <td>{{ $cliente->name }}</td>
                             <td>{{ $cliente->slug }}</td>
                             <td>{{ $cliente->bio }}</td>

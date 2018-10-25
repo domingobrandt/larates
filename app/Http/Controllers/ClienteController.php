@@ -57,7 +57,6 @@ class ClienteController extends Controller
             $file = $request->file('avatar');
             $namea = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/', $namea);
-            
         }
 
         $cliente->name = $request->input('name');
