@@ -66,7 +66,7 @@ class ClienteController extends Controller
         $cliente->save();
 
         
-        return redirect()->route('cliente.index && cliente.card');
+        return redirect()->route('cliente.card');
 
         
     }
@@ -82,6 +82,7 @@ class ClienteController extends Controller
         //$cliente = Cliente::where('slug','=',$slug)->firstOrFail();
         //$cliente = Cliente::find($id);
         return view('cliente.show', compact('cliente'));
+
     }
 
     /**
