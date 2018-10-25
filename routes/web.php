@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/card', function () {
+    return view('cliente.card');
+});
 Auth::routes();
 
 
