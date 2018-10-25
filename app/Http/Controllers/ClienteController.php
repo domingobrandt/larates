@@ -67,8 +67,7 @@ class ClienteController extends Controller
 
         
         return redirect()->route('cliente.index');
-
-        return redirect()->route('cliente.card');
+        return view('cliente.card');
 
     }
 
@@ -80,8 +79,8 @@ class ClienteController extends Controller
      */
     public function show(cliente $cliente)
     {
-        //$cliente = Cliente::where('slug','=',$slug)->firstOrFail();
-        //$cliente = Cliente::find($id);
+        $cliente = Cliente::where('slug','=',$slug)->firstOrFail();
+        $cliente = Cliente::find($id);
         return view('cliente.show', compact('cliente'));
 
     }
