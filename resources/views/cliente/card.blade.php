@@ -1,46 +1,23 @@
-
 @extends('layouts.app')
 
 @section('title', 'clients')
 
 @section('content')
-
-        <div class="container-fluid">
-        <h4> Busqueda de Cliente</h4>
-        {{ Form::open(['route' => 'cliente.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
-        <div class="form-group">
-            {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Name']) }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Slug']) }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('bio', null, ['class' => 'form-control', 'placeholder' => 'Bio']) }}
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-default">Find
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
-     
-        </div>
-    {{ Form::close() }}
-
-</div>
-        <div class="col-md-8">
-            <table class="table">
-                    <tbody>
-                            @foreach($clientes as $cliente)
-                        <tr>
-                            <td>{{ $cliente->id }}</td>
-                            <td>{{ $cliente->name }}</td>
-                            <td>{{ $cliente->slug }}</td>
-                            <td>{{ $cliente->bio }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                {{ $clientes->render() }}
-
+<div class="container">
+        <div class="row">
+                @foreach($clientes as $cliente)
+          <div class="col-sm">
+                <div class="card text-center" style="width: 18rem; margin-top: 50px;">
+                    <img style=" margin-top: 25px;
+                    width: 60%; background-color: #efefef;" class="card-img-top rounded-circle mx-auto d-block"  src="/images/{{$cliente->avatar}}" alt="{{$cliente->avatar}}">
+                 <div class="card-body">
+                    <h5 class="card-title">{{$cliente->name}}</h5>
+                    <p class="card-text">{{$cliente->bio}}</p>
+                    <a href="/cliente/{{$cliente->slug}}" class="btn btn-primary">Ver mas..</a>
+                    </div>
+                 </div>
             </div>
-
+            @endforeach
+        </div>
+    </div>
 @endsection

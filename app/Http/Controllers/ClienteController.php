@@ -38,6 +38,7 @@ class ClienteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function card()
+    
     {
 
         return view('cliente.card');
@@ -73,7 +74,6 @@ class ClienteController extends Controller
 
         
         return redirect()->route('cliente.index');
-        return view('cliente.card');
     }
 
     /**
