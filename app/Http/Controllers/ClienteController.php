@@ -37,6 +37,12 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function card()
+    {
+
+        return view('cliente.card');
+    }
+
     public function create()
     {
 
