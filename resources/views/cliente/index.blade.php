@@ -5,7 +5,7 @@
 @section('content')
 
         <div class="container-fluid">
-        <h4> Busqueda de Cliente</h4>
+        <h4> Find Clients </h4>
         {{ Form::open(['route' => 'cliente.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
         <div class="form-group">
             {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Name']) }}
@@ -40,7 +40,6 @@
                     </tbody>
                 </table>
                 {{ $clientes->render() }}
-
             </div>
 
 @endsection
