@@ -122,9 +122,9 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cliente $cliente)
+    public function destroy(Request $request, cliente $cliente)
     {
-        $cliente->user()->authorizeRoles(['admin']);
+        $request->user()->authorizeRoles(['admin']);
         $file_path = public_path().'/images/'.$cliente->avatar;
         \File::delete($file_path);
         $cliente->delete();
