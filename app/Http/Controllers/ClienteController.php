@@ -80,7 +80,7 @@ class ClienteController extends Controller
     public function show(cliente $cliente)
     {
         $cliente = Cliente::where('slug','=',$slug)->firstOrFail();
-        $cliente = Cliente::find($id);
+        //$cliente = Cliente::find($id);
         return view('cliente.show', compact('cliente'));
 
     }
