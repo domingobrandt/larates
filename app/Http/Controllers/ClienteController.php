@@ -40,7 +40,7 @@ class ClienteController extends Controller
 
     public function create(Request $request)
     {
-        $request->user()->authorizeRoles(['admin'AND'domingo']);
+        $request->user()->authorizeRoles(['domingo'||'admin']);
         return view('cliente.create');
     }
 
@@ -124,7 +124,7 @@ class ClienteController extends Controller
      */
     public function destroy(Request $request, cliente $cliente)
     {
-        $request->user()->authorizeRoles(['admin' AND 'domingo']);
+        $request->user()->authorizeRoles(['domingo'||'admin']);
         $file_path = public_path().'/images/'.$cliente->avatar;
         \File::delete($file_path);
         $cliente->delete();
