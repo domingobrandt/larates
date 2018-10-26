@@ -1,7 +1,7 @@
 <?php
 
 namespace Uxcamp\Http\Controllers;
-use Uxcamp\user;
+use Uxcamp\User;
 use Uxcamp\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $users = user::all();
+        $users = User::all();
         return View::make('user')->with('users',$users);
  
 
