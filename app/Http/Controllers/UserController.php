@@ -1,7 +1,7 @@
 <?php
 
 namespace Uxcamp\Http\Controllers;
-use Uxcamp\User;
+use Uxcamp\user;
 use Uxcamp\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 
@@ -14,17 +14,11 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $id = $request->get('id');
-        $name = $request->get('name');
-    	$email = $request->get('email');
-        //$request->user()->authorizeRoles(['admin','user']);
-        $users = User::orderBy('id', 'DESC')
-        ->id($id)
-        ->name($name)
-        ->email($email)
-        ->paginate(10);
-        //$clientes = Cliente::all();
-        return view('Users.index', compact('users'));    }
+        $users= user::all();
+        return view('Users.index', compact('users'));
+ 
+
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -44,6 +38,9 @@ class UserController extends Controller
      */
     public function store()
     {
+
+
+
     }
     /**
      * Display the specified resource.
@@ -51,9 +48,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show( )
     {
-        //
     }
 
     /**

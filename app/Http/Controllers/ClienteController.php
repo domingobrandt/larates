@@ -18,16 +18,17 @@ class ClienteController extends Controller
     
     public function index(Request $request)
     {
+       //$request->user()->authorizeRoles(['admin','user']);
+        //$clientes = Cliente::all();
+
         $name  = $request->get('name');
-    	$slug = $request->get('slug');
-    	$bio   = $request->get('bio');
-        //$request->user()->authorizeRoles(['admin','user']);
+        $slug = $request->get('slug');
+        $bio   = $request->get('bio');
         $clientes = Cliente::orderBy('id', 'DESC')
         ->name($name)
         ->slug($slug)
         ->bio($bio)
         ->paginate(10);
-        //$clientes = Cliente::all();
         return view('cliente.index', compact('clientes'));
 
     }

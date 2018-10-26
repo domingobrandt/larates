@@ -68,6 +68,10 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+                <div class="links">
+                        <a href="/cliente">Clients List</a>
+                        <a href="/user">User List</a>
+                    </div>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -84,11 +88,7 @@
                     Ux-Camp
                 </div>
 
-                <div class="links">
-                    <a href="/cliente">Clients List</a>
-                    <a href="/user">User List</a>
-                    <a href="https://laravel-news.com">News</a>
-                </div>
+
             </div>
         </div>
     </body>

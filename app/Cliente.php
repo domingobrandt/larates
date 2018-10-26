@@ -17,11 +17,13 @@ class Cliente extends Model
             if($name)
                 return $query->where('name', 'LIKE', "%$name%");
         }
+
         public function scopeSlug($query, $slug)
         {
             if($slug)
                 return $query->where('slug', 'LIKE', "%$slug%");
         }
+        
         public function scopeBio($query, $bio)
         {
             if($bio)
