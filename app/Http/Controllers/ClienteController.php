@@ -40,7 +40,7 @@ class ClienteController extends Controller
 
     public function create(Request $request)
     {
-        $request->user()->authorizeRoles(['admin']);
+        $request->user()->authorizeRoles(['admin','domingo']);
         return view('cliente.create');
     }
 

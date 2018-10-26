@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Laratest\Role;
+use Uxcamp\Role;
 class RoleTableSeeder extends Seeder
 {
     /**
