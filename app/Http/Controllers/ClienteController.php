@@ -92,6 +92,7 @@ class ClienteController extends Controller
      */
     public function edit(cliente $cliente)
     {
+
         return view('cliente.edit', compact('cliente'));
     }
 
@@ -104,6 +105,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, cliente $cliente)
     {
+        $request->user()->authorizeRoles(['admin','domingo']);
         $cliente->fill($request->except('avatar'));
         if($request->hasFile('avatar')){
             $file = $request->file('avatar');
