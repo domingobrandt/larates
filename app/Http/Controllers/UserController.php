@@ -14,7 +14,6 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $id = $request->get('id');
         $name  = $request->get('name');
     	$email   = $request->get('email');
         //$request->user()->authorizeRoles(['admin','user']);
@@ -42,17 +41,9 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RegisterController $request)
+    public function store()
     {
-        $user = new User();
-
-        $user->id = $request->input('id');
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->save();
-
-        return redirect()->route('Users.index');    }
-
+    }
     /**
      * Display the specified resource.
      *

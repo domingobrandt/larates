@@ -3,7 +3,7 @@
 @section('title', 'Users')
 
 @section('content')
-
+<div class="container">
         <div class="container-fluid">
         <h4> Find Users </h4>
         {{ Form::open(['route' => 'Users.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
@@ -12,9 +12,6 @@
         </div>
         <div class="form-group">
             {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'email']) }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('id', null, ['class' => 'form-control', 'placeholder' => 'id']) }}
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-default">Find
@@ -30,7 +27,6 @@
                     <tbody>
                             @foreach($users as $user)
                         <tr>
-                            <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                         </tr>
@@ -39,5 +35,5 @@
                 </table>
                 {{ $users->render() }}
             </div>
-
+        </div>
 @endsection
