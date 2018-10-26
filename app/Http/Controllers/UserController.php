@@ -14,10 +14,12 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
+        $id = $request->get('id');
         $name = $request->get('name');
     	$email = $request->get('email');
         //$request->user()->authorizeRoles(['admin','user']);
-        $users = User::orderBy('name', 'DESC')
+        $users = User::orderBy('id', 'DESC')
+        ->id($id)
         ->name($name)
         ->email($email)
         ->paginate(10);
