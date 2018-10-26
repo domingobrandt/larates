@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
-    protected $table = ['id','name','email'];
 
     use Notifiable;
 
