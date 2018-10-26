@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Laratest\Role;
-use Laratest\User;
+use Uxcamp\Role;
+use Uxcamp\User;
 
 class UserTableSeeder extends Seeder
 {
