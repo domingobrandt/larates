@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class user extends Model
 {
-    protected $table = ['name','email'];
+    protected $table = ['id','name','email'];
     public $timestamp = false;
 
 }
