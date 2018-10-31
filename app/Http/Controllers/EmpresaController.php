@@ -3,10 +3,10 @@
 namespace Uxcamp\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Uxcamp\Cliente;
-use Uxcamp\Http\Requests\StoreClienteRequest;
+use Uxcamp\Empresa;
+use Uxcamp\Http\Requests\StoreEmpresaRequest;
 
-class ClienteController extends Controller
+class EmpresaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,17 +19,17 @@ class ClienteController extends Controller
     public function index(Request $request)
     {
        //$request->user()->authorizeRoles(['admin','user']);
-        //$clientes = Cliente::all();
+        //$empresas = empresa::all();
 
         $name  = $request->get('name');
         $slug = $request->get('slug');
         $bio   = $request->get('bio');
-        $clientes = Cliente::orderBy('id', 'DESC')
+        $empresas = Empresa::orderBy('id', 'DESC')
         ->name($name)
         ->slug($slug)
         ->bio($bio)
         ->paginate(10);
-        return view('cliente.index', compact('clientes'));
+        return view('empresa.index', compact('empresas'));
 
     }
 
@@ -42,7 +42,7 @@ class ClienteController extends Controller
     public function create(Request $request)
     {
         $request->user()->authorizeRoles(['admin','domin']);
-        return view('cliente.create');
+        return view('empresa.create');
     }
 
     /**
@@ -51,9 +51,9 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreClienteRequest $request)
+    public function store(StoreempresaRequest $request)
     {
-        $cliente = new Cliente();
+        $empresa = new Empresa();
 
         if($request->hasFile('avatar')){
             $file = $request->file('avatar');
@@ -61,27 +61,21 @@ class ClienteController extends Controller
             $file->move(public_path().'/images/', $namea);
         }
 
-        $cliente->name = $request->input('name');
-        $cliente->bio = $request->input('bio');
-        $cliente->avatar = $namea; 
-        $cliente->slug = $request->input('slug');
-        $cliente->save();
+        $empresa->name = $request->input('name');
+        $empresa->bio = $request->input('bio');
+        $empresa->avatar = $namea; 
+        $empresa->slug = $request->input('slug');
+        $empresa->save();
 
         
-        return redirect()->route('cliente.index');
+        return redirect()->route('empresa.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(cliente $cliente)
+    public function show(empresa $empresa)
     {
-        //$cliente = Cliente::where('slug','=',$slug)->firstOrFail();
-        //$cliente = Cliente::find($id);
-        return view('cliente.show', compact('cliente'));
+        //$empresa = empresa::where('slug','=',$slug)->firstOrFail();
+        //$empresa = empresa::find($id);
+        return view('empresa.show', compact('empresa'));
 
     }
 
@@ -91,10 +85,10 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(cliente $cliente)
+    public function edit(empresa $empresa)
     {
 
-        return view('cliente.edit', compact('cliente'));
+        return view('empresa.edit', compact('empresa'));
     }
 
     /**
@@ -104,18 +98,18 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cliente $cliente)
+    public function update(Request $request, empresa $empresa)
     {
         $request->user()->authorizeRoles(['admin','domin']);
-        $cliente->fill($request->except('avatar'));
+        $empresa->fill($request->except('avatar'));
         if($request->hasFile('avatar')){
             $file = $request->file('avatar');
             $namea = time().$file->getClientOriginalName();
-            $cliente->avatar =$namea;
+            $empresa->avatar =$namea;
             $file->move(public_path().'/images/', $namea);
         }
-        $cliente->save();
-        return redirect()->route('cliente.show', [$cliente])->with('status','Cliente actualizado correctament');
+        $empresa->save();
+        return redirect()->route('empresa.show', [$empresa])->with('status','empresa actualizado correctament');
         //return 'updated';
     }
 
@@ -125,13 +119,13 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, cliente $cliente)
+    public function destroy(Request $request, empresa $empresa)
     {
         $request->user()->authorizeRoles(['admin','domin']);
-        $file_path = public_path().'/images/'.$cliente->avatar;
+        $file_path = public_path().'/images/'.$empresa->avatar;
         \File::delete($file_path);
-        $cliente->delete();
-        return redirect()->route('cliente.index')->with('status','Cliente Eliminado');
+        $empresa->delete();
+        return redirect()->route('empresa.index')->with('status','empresa Eliminado');
         //return 'deleted';
     }
 }

@@ -24,6 +24,7 @@ Auth::routes();
 
 Route::get('/user', 'UserController@index');
 //Route::get('/user', 'UserController@index')->name('home');
+Route::resource('empresa', 'EmpresaController');
 
 Route::resource('cliente', 'ClienteController');
 //Route::resource('user', 'UserController');

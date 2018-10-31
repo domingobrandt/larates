@@ -87,6 +87,7 @@
                 <div class="links">
                         <a href="/cliente">Clients List</a>
                         <a href="/user">User List</a>
+                        <a href="/empresa">Empresa List</a>
                     </div>
 
             </div>

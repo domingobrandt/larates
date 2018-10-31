@@ -3,22 +3,19 @@
 namespace Uxcamp;
 
 use Illuminate\Database\Eloquent\Model;
-use Uxcamp\Empresa;
+use Uxcamp\Cliente;
 
-class Cliente extends Model
+class Empresa extends Model
 {
     protected $fillable = ['name','bio','avatar','slug'];
-    
     public function getRouteKeyName()
     {
         return 'slug';
     }
-    public function empresa(){ 
-        return $this->belongsToMany('\Uxcamp\Empresa','cliente_empresa')
-        ->withPivot('empresa_id'); 
+    public function cliente(){ 
+        return $this->belongsToMany('\Uxcamp\Cliente','cliente_empresa')
+        ->withPivot('cliente_id'); 
         }
-
-
         //Query Scope
         public function scopeName($query, $name)
         {

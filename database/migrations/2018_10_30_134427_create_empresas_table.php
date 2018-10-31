@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAvatarClientTable extends Migration
+class CreateEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,16 @@ class AddAvatarClientTable extends Migration
      */
     public function up()
     {
-        Schema::table('clientes', function (Blueprint $table) {
+        Schema::create('empresas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name',100);
+            $table->string('slug',100)->unique();
+            $table->text('bio');
             $table->string('avatar');
+            $table->timestamps();
+
+
+
         });
     }
 
@@ -25,8 +33,6 @@ class AddAvatarClientTable extends Migration
      */
     public function down()
     {
-        Schema::table('clientes', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('empresas');
     }
 }
