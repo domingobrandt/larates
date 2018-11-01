@@ -28,3 +28,8 @@ Route::resource('empresa', 'EmpresaController');
 
 Route::resource('cliente', 'ClienteController');
 //Route::resource('user', 'UserController');
+Route::get('/test', function () {
+    $empresa = Uxcamp\Empresa::findOrFail(8);
+    return $empresa->clientes;
+
+});

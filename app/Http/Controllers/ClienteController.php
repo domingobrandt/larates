@@ -30,7 +30,6 @@ class ClienteController extends Controller
         ->bio($bio)
         ->paginate(10);
         return view('cliente.index', compact('clientes'));
-
     }
 
     /**
@@ -65,6 +64,10 @@ class ClienteController extends Controller
         $cliente->bio = $request->input('bio');
         $cliente->avatar = $namea; 
         $cliente->slug = $request->input('slug');
+        //$empresa = Uxcamp\Empresa::find(1);
+       //$cliente = Uxcamp\Cliente::find(1);
+                //$cliente->empresa_id;
+        //$cliente->empresa->id = $request->input('');
         $cliente->save();
 
         
@@ -114,6 +117,9 @@ class ClienteController extends Controller
             $cliente->avatar =$namea;
             $file->move(public_path().'/images/', $namea);
         }
+
+        //$cliente->empresa_id;
+        //$cliente->empresa->id;
         $cliente->save();
         return redirect()->route('cliente.show', [$cliente])->with('status','Cliente actualizado correctament');
         //return 'updated';

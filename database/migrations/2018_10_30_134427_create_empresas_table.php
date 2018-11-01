@@ -18,10 +18,8 @@ class CreateEmpresasTable extends Migration
             $table->string('name',100);
             $table->string('slug',100)->unique();
             $table->text('bio');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->timestamps();
-
-
 
         });
     }

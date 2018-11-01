@@ -84,6 +84,11 @@
                 <div class="title m-b-md">
                     Ux-Camp
                 </div>
+                <div class="section m-b-md">
+                    <label>Login</label>
+                    <label>USER: ID:"user@mail.com" PW:'query'</label>
+                    <label>ADMIN: ID:"admin@mail.com" PW:'query'</label>
+                </div>
                 <div class="links">
                         <a href="/cliente">Clients List</a>
                         <a href="/user">User List</a>

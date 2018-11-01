@@ -7,15 +7,14 @@ use Uxcamp\Empresa;
 
 class Cliente extends Model
 {
-    protected $fillable = ['name','bio','avatar','slug'];
+    protected $fillable = ['name','bio','avatar','slug', 'empresa_id'];
     
     public function getRouteKeyName()
     {
         return 'slug';
     }
-    public function empresa(){ 
-        return $this->belongsToMany('\Uxcamp\Empresa','cliente_empresa')
-        ->withPivot('empresa_id'); 
+    public function empresas(){ 
+        return $this->belongsToMany('\Uxcamp\Empresa', 'clientes_empresas','cliente_id','empresa_id'); 
         }
 
 
