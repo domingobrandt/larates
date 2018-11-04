@@ -164,7 +164,7 @@ return [
         /*
          * Laravel Collective Service Providers...
          */
-                Collective\Html\HtmlServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
 
     ],
