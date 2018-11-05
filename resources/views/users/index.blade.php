@@ -3,15 +3,16 @@
 @section('title', 'Users')
 
 @section('content')
-<div class="container">
+        <div class="container-text-center" align="center">
         <div class="col-md-8">
-            <table class="table">
+            <h4>Users Table</h4>
+            <table class="table table-hover table-bordered">
                     <tbody>
                             @foreach($users as $user)
                         <tr>
-                            <td>{{ $user->id }}</td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
+                            <td scope="row">{{ $user->id }}</td>
+                            <td scope="row">{{ $user->name }}</td>
+                            <td scope="row">{{ $user->email }}</td>
                         </tr>
                         @endforeach
                     </tbody>
