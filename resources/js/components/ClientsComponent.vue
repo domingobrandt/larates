@@ -28,7 +28,7 @@ export default {
 		},
     mounted(){
            axios
-            	.get('http://127.0.0.1:8000/cliente')
+            	.get('http://ux-camp.herokuapp.com/cliente')
             	.then((res) => {
 					this.clientes = res.data
 					this.loading = false
