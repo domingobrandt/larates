@@ -23,7 +23,6 @@
                     <button type="submit" class="btn btn-default">Find
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
-             
                 </div>
             {{ Form::close() }}
             <table class="table table-hover table-bordered">
@@ -42,6 +41,7 @@
                 </table>
                 {{ $clientes->render() }}
             </div>
+            <a href="/cliente/card"  class="btn btn-default">Another View</a>
         </div>    
 
 @endsection

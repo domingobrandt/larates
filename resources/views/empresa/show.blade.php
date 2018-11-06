@@ -8,6 +8,8 @@
 <img style=" margin-top: 25px; width: 200px; background-color: #efefef;" class="card-img-top rounded-circle mx-auto d-block"  src="{{$empresa->avatar}}" alt="{{$empresa->avatar}}">
      <h5 class="card-title">{{$empresa->name}}</h5>
      <p class="card-text">{{$empresa->bio}}</p>
+     <label>Relacion</label>
+     <p class="card-text">{{$empresa->clientes}}</p>
      <a href="/empresa/{{$empresa->slug}}/edit" class="btn btn-primary"> Editar </a>
 
      {!! Form::open([ 'route' => ['empresa.destroy', $empresa->slug], 'method' => 'DELETE']) !!}

@@ -20,7 +20,10 @@ class ClienteController extends Controller
     {
        //$request->user()->authorizeRoles(['admin','user']);
         //$clientes = Cliente::all();
-
+        if($request->ajax()){
+            $clientes = Cliente::all();
+            return response()->json($clientes);
+    	}
         $name  = $request->get('name');
         $slug = $request->get('slug');
         $bio   = $request->get('bio');

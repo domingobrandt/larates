@@ -10,13 +10,13 @@
                     <tbody>
                             @foreach($users as $user)
                         <tr>
-                            <td scope="row">{{ $user->id }}</td>
                             <td scope="row">{{ $user->name }}</td>
                             <td scope="row">{{ $user->email }}</td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
+                <example-component></example-component>
             </div>
         </div>
 @endsection
