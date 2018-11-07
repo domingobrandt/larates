@@ -23,16 +23,15 @@
 export default {
     		data(){
 			return {
-				clientes: []
+				clientes: [
+                    {id:1, name:"mingo", bio:"texto largo", avatar:"https://lh3.googleusercontent.com/Ax2wQYxjDITuZEpc6K9EDYPG7C839tb4PApia4Tmf18u8XehB-twqhVgDVPgxxExkr4=s180"},
+                    {id:2, name:"miqngo", bio:"texto larwgo",},
+                    {id:3, name:"mirngo", bio:"texto largeo",},
+                ]
 			}
 		},
     mounted(){
-           axios
-            	.get('https://ux-camp.herokuapp.com/cliente')
-            	.then((res) => {
-					this.clientes = res.data
-					this.loading = false
-            	})
+console.log('compoment mount')
     }
 }
 </script>
