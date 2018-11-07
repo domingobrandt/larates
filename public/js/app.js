@@ -48008,7 +48008,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('http://127.0.0.1:8000/cliente').then(function (res) {
+    axios.get('http://127.0.0.1:8000//cliente').then(function (res) {
       _this.clientes = res.data;
       _this.loading = false;
     });
