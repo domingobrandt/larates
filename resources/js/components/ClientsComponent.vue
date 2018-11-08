@@ -22,6 +22,7 @@
 </style>
 <script>
 export default {
+
     data(){
         return {
             clientes: [],
@@ -30,7 +31,7 @@ export default {
         },
     mounted(){
            axios
-                .get('https://ux-camp.herokuapp.com/cliente')
+                .get('http://ux-camp.herokuapp.com/cliente')
                 .then((res) => {
                     this.clientes = res.data
                     this.loading = false

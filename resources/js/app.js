@@ -19,7 +19,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 
 Vue.component('companies-component', require('./components/CompaniesComponent.vue'));
 Vue.component('clients-component', require('./components/ClientsComponent.vue'));
-Vue.component('spinner-component', require('./components/SpinnerComponent.vue'));
+Vue.component('spinner', require('./components/Spinner.vue'));
 
 const app = new Vue({
     el: '#app'
