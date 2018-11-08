@@ -165,6 +165,8 @@ return [
          * Laravel Collective Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        //cors
+        Barryvdh\Cors\ServiceProvider::class,
 
 
     ],
