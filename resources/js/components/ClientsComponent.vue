@@ -26,7 +26,7 @@ export default {
     data(){
         return {
             clientes: [],
-            loading=true
+            loading:true
                 }
         },
     mounted(){
