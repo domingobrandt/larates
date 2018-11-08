@@ -2,6 +2,7 @@
 <template>
 <div class="container">
         <div class="row">
+            <spinner v-show="loading"></spinner>
           <div class="col-sm" v-for="cliente in clientes">
                 <div class="card text-center" style="width: 18rem; margin-top: 50px;">
                     <img style=" margin-top: 25px;
@@ -23,7 +24,8 @@
 export default {
     data(){
         return {
-            clientes: []
+            clientes: [],
+            loading=true
                 }
         },
     mounted(){
