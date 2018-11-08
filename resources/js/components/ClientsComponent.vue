@@ -31,7 +31,7 @@ export default {
         },
     mounted(){
            axios
-                .get('http://ux-camp.herokuapp.com/cliente')
+                .get('https://ux-camp.herokuapp.com/cliente')
                 .then((res) => {
                     this.clientes = res.data
                     this.loading = false
