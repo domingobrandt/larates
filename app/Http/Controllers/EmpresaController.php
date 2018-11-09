@@ -4,7 +4,7 @@ namespace Uxcamp\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Uxcamp\Empresa;
-use Uxcamp\Http\Requests\StoreEmpresaRequest;
+use Uxcamp\Http\Requests\Store;
 
 class EmpresaController extends Controller
 {
@@ -51,7 +51,7 @@ class EmpresaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreempresaRequest $request)
+    public function store(Store $request)
     {
         $empresa = new Empresa();
 

@@ -4,7 +4,7 @@ namespace Uxcamp\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Uxcamp\Cliente;
-use Uxcamp\Http\Requests\StoreClienteRequest;
+use Uxcamp\Http\Requests\Store;
 
 class ClienteController extends Controller
 {
@@ -22,7 +22,7 @@ class ClienteController extends Controller
         //$clientes = Cliente::all();
         if($request->ajax()){
             $clientes = Cliente::all();
-            return response()->json($clientes);
+            return response()->json($clientes, 200);
     	}
         $name  = $request->get('name');
         $slug = $request->get('slug');
@@ -53,7 +53,7 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreClienteRequest $request)
+    public function store(Store $request)
     {
         $cliente = new Cliente();
 

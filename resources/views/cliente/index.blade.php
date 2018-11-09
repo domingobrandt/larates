@@ -28,12 +28,15 @@
             <table class="table table-hover table-bordered">
                     
                     <tbody>
-                            @foreach($clientes as $cliente)
+                            @foreach($empresa->$clientes as $cliente)
+                            foreach ($user->roles as $role) {
+    echo $role->pivot->created_at;
                         <tr>
                             <td scope="row">{{ $cliente->id }}</td>
                             <td scope="row">{{ $cliente->name }}</td>
                             <td scope="row">{{ $cliente->slug }}</td>
                             <td scope="row">{{ $cliente->bio }}</td>
+                            <td scope="row">{{ $cliente->pivot->created_at}}</td>
                             <td scope="row"><a href="/cliente/{{$cliente->slug}}" class="btn btn-primary">More..</a></td>
                         </tr>
                         @endforeach

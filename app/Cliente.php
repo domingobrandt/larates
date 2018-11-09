@@ -7,7 +7,7 @@ use Uxcamp\Empresa;
 
 class Cliente extends Model
 {
-    protected $fillable = ['name','bio','avatar','slug', 'empresa_id'];
+    protected $fillable = ['name','bio','avatar','slug', 'empresa_id','cliente_id'];
     
     public function getRouteKeyName()
     {
