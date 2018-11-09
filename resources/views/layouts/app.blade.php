@@ -42,7 +42,7 @@
                                                   Create   <i class="fas fa-pencil-alt"></i>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                  <a class="dropdown-item" href="/cliente/create">Crear CLiente</a>
+                                                  <a class="dropdown-item" href="/cliente/create">Crear Cliente</a>
                                                   <a class="dropdown-item"  href="/empresa/create">Crear Empresa</a>
                                                 </div>
                                               </li>
@@ -52,8 +52,9 @@
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                               <a class="dropdown-item" href="/user">User List   <i class="fas fa-user"></i></a>
-                                              <a class="dropdown-item" href="/cliente">CLient List</a>
-                                              <a class="dropdown-item" href="/empresa">Empresa List   <i class="fas fa-user-tie"></i> </a>
+                                              <a class="dropdown-menu" href="/cliente">Client List </a>
+                                              <a class="dropdown-item" href="/cliente/card">Client List card <i class="fas fa-id-card"></i></a>
+                                              <a class="dropdown-item" href="/empresa">Empresa List  <i class="fas fa-user-tie"></i> </a>
                                             </div>
                                           </li>
                                         
