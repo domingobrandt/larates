@@ -52,7 +52,7 @@
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                               <a class="dropdown-item" href="/user">User List   <i class="fas fa-user"></i></a>
-                                              <a class="dropdown-menu" href="/cliente">Client List </a>
+                                              <a class="dropdown-item" href="/cliente">Client List </a>
                                               <a class="dropdown-item" href="/cliente/card">Client List card <i class="fas fa-id-card"></i></a>
                                               <a class="dropdown-item" href="/empresa">Empresa List  <i class="fas fa-user-tie"></i> </a>
                                             </div>
