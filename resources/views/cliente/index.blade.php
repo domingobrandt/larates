@@ -4,7 +4,7 @@
 
 @section('content')
 
-
+@include('common.errors')
 
 <div class="container-text-center" align="center">
         <div class="col-md-8" >
