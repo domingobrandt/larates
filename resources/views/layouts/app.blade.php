@@ -42,8 +42,13 @@
                                                   Create   <i class="fas fa-pencil-alt"></i>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                  <a class="dropdown-item" href="/cliente/create">Crear Cliente</a>
+                                                        @if (session('status'))
+                                                        <div class="alert alert-success">
+                                                                {{ session('status') }}
+                                                            </div>
+                                                        <a class="dropdown-item" href="/cliente/create">Crear Cliente</a>
                                                   <a class="dropdown-item"  href="/empresa/create">Crear Empresa</a>
+                                                  @endif
                                                 </div>
                                               </li>
                                         <li class="nav-item dropdown">

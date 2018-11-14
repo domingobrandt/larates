@@ -26,7 +26,7 @@
  
     <div class="form-group">
         {!!Form::label('avatar','Avatar')!!}
-        {!!Form::file('avatar')!!}
+        {!!Form::file('avatar',['class' => 'btn btn-warning'])!!}
     </div>
 
 {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
