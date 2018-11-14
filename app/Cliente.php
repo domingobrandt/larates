@@ -13,9 +13,10 @@ class Cliente extends Model
     {
         return 'slug';
     }
+
     public function empresas(){ 
-        return $this->belongsToMany('\Uxcamp\Empresa', 'clientes_empresas','cliente_id','empresa_id'); 
-        }
+      return $this->belongsToMany('\Uxcamp\Empresa', 'clientes_empresas','cliente_id','empresa_id'); 
+    }
 
 
         //Query Scope

@@ -3,6 +3,7 @@
 @section('title', 'clients')
 
 @section('content')
+
 <clients-component></clients-component>
 
 @endsection
