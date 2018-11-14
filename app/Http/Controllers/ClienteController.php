@@ -45,7 +45,7 @@ class ClienteController extends Controller
     {
         if ($request->user()->authorizeRoles(['admin','domin'])){
             return view('cliente.create');
-        }elseif ($request->user()->authorizeRoles(null)){
+        }elseif ($request->user()->authorizeRoles(null,'')){
             return view('cliente.index');
         }
     }

@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('common.success')
+
 @include('common.errors')
 
 {!! Form::open(['route' => 'cliente.store', 'method' => 'POST', 'files' => true ]) !!}
@@ -27,7 +29,7 @@
         {!!Form::file('avatar')!!}
     </div>
 
-{!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+{!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
 
 {!! Form::close()!!}
 
