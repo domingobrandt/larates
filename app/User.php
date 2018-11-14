@@ -22,6 +22,12 @@ class User extends Authenticatable
         }
         abort(401, 'This action is unauthorized');
     }
+    public function authorizeRoless($roles){
+        if($this->hasAnyRole(null)){
+            return true;
+        }
+        abort(401, 'This action is unauthorized');
+    }
     public function hasAnyRole($roles){
         if(is_array($roles)){
             foreach ($roles as $role) {
