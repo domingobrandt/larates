@@ -45,13 +45,11 @@ class ClienteController extends Controller
     public function create(Request $request)
     {
 
-        if($request->user()->authorizeRoles(['admin','domin'])){
-            return view('cliente.create');
-
+        if ($role == NULL) {
+            return view('nopermission');
         }
-        elseif ($request->user()->hasRoless()){
-            return view('cliente.index');
-
+        elseif ($request->user()->authorizeRoles(['admin','domin'])){
+            return view('cliente.create');
         }
         
     }
