@@ -5,7 +5,6 @@ namespace Uxcamp\Http\Controllers;
 use Illuminate\Http\Request;
 use Uxcamp\Cliente;
 use Uxcamp\Http\Requests\Store;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class ClienteController extends Controller
 {
@@ -45,7 +44,7 @@ class ClienteController extends Controller
     public function create(Request $request)
     {
 
-        if ($role == NULL) {
+        if ($request->user()->authorizeRoles() == NULL) {
             return view('nopermission');
         }
         elseif ($request->user()->authorizeRoles(['admin','domin'])){
