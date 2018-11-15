@@ -22,7 +22,7 @@ class User extends Authenticatable
         }
         abort(401, 'This action is unauthorized');
     }
-    public function authorizeRoless($roles){
+    public function authorizeRoless(){
         if($this->hasAnyRole(null)){
             return true;
         }
