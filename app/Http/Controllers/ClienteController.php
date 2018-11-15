@@ -43,7 +43,7 @@ class ClienteController extends Controller
 
     public function create(Request $request)
     {
-        if( $request-> Auth::user()->rol =='admin' ) //se valida el tipo de usuario
+        if( Auth::user()->rol =='admin' ) //se valida el tipo de usuario
         return redirect('cliente.create');
     else
         return redirect('cliente.index');
