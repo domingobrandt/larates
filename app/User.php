@@ -12,6 +12,12 @@ class User extends Authenticatable
 
     use Notifiable;
 
+    public function hasRoless($role = null){
+        if($this->hasAnyRole(null)){
+            return true;
+        }
+        abort(501, 'This action is unauthorized');
+    }
     public function roles(){
         return $this->belongsToMany('Uxcamp\Role');
     }
@@ -22,12 +28,7 @@ class User extends Authenticatable
         }
         abort(401, 'This action is unauthorized');
     }
-    public function authorizeRoless(){
-        if($this->hasAnyRole(null)){
-            return true;
-        }
-        abort(401, 'This action is unauthorized');
-    }
+   
     public function hasAnyRole($roles){
         if(is_array($roles)){
             foreach ($roles as $role) {

@@ -5,6 +5,7 @@ namespace Uxcamp\Http\Controllers;
 use Illuminate\Http\Request;
 use Uxcamp\Cliente;
 use Uxcamp\Http\Requests\Store;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class ClienteController extends Controller
 {
@@ -43,12 +44,16 @@ class ClienteController extends Controller
 
     public function create(Request $request)
     {
-        if(\Auth::user()->$roles == 'admin')
-        {
-            return redirect('cliente.create');
-        } else {
-            return redirect('cliente.index');
+
+        if($request->user()->authorizeRoles(['admin','domin'])){
+            return view('cliente.create');
+
         }
+        elseif ($request->user()->hasRoless()){
+            return view('cliente.index');
+
+        }
+        
     }
 
     /**
