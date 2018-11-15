@@ -46,7 +46,7 @@ class ClienteController extends Controller
         
         if( $request->user()->authorizeRoles(['admin','domin']) ) //se valida el tipo de usuario
         return redirect('cliente.create');
-    else
+    elseif ( $request->user()->authorizeRoles([null]) )
         return redirect('cliente.index');
     }
 
