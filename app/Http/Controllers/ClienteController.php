@@ -43,11 +43,12 @@ class ClienteController extends Controller
 
     public function create(Request $request)
     {
-        
-        if( $request->user()->authorizeRoles(['admin','domin']) ) //se valida el tipo de usuario
-        return redirect('cliente.create');
-    elseif ( $request->user()->authorizeRoles([null]) )
-        return redirect('cliente.index');
+        if(\Auth::user()->rol == 'admin')
+        {
+            return redirect('cliente.create');
+        } else {
+            return redirect('cliente.index');
+        }
     }
 
     /**
