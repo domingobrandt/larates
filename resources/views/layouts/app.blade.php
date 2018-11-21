@@ -42,11 +42,8 @@
                                                   Create   <i class="fas fa-pencil-alt"></i>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        @if (Auth::check())
                                                   <a class="dropdown-item" href="/cliente/create">Crear Cliente</a>
                                                   <a class="dropdown-item"  href="/empresa/create">Crear Empresa</a>
-                                                  @else
-                                                  @endif
                                                 </div>
                                               </li>
                                         <li class="nav-item dropdown">
