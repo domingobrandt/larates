@@ -24,8 +24,6 @@ Route::get('/cliente/card', function () {
 
 Auth::routes();
 
-Auth::routes();
-
 Route::get('/user', 'UserController@index');
 //Route::get('/user', 'UserController@index')->name('home');
 Route::resource('empresa', 'EmpresaController');
