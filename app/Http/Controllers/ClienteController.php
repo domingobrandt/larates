@@ -43,8 +43,10 @@ class ClienteController extends Controller
 
     public function create(Request $request)
     {
-        $request->user()->authorizeRoles(null);
-        return view('empresa.index');
+        if ($request->user()->authorizeRoles(null)){
+            return view('empresa.index');
+
+        }
     }
 
     /**
