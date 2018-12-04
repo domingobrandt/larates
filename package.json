@@ -10,6 +10,7 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "postinstall": "npm run prod"
 
+
     },
     "devDependencies": {
         "axios": "^0.18",
@@ -26,4 +27,5 @@
         "img-loader": "^3.0.1",
         "webpack-dev-server": "^3.1.10"
     }
+
 }

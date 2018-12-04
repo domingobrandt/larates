@@ -5,6 +5,7 @@ namespace Uxcamp\Http\Controllers;
 use Illuminate\Http\Request;
 use Uxcamp\Cliente;
 use Uxcamp\Http\Requests\Store;
+use Uxcamp\clientes_empresas;
 
 class ClienteController extends Controller
 {
@@ -43,6 +44,8 @@ class ClienteController extends Controller
 
     public function create(Request $request)
     {
+        //$jobs= Job::pluck('name','id');
+
         $request->user()->authorizeRoles(['admin','domin']);
         return view('cliente.create');
     }
@@ -56,6 +59,7 @@ class ClienteController extends Controller
     public function store(Store $request)
     {
         $cliente = new Cliente();
+        $relacion = new clientes_empresas();
 
         if($request->hasFile('avatar')){
             $file = $request->file('avatar');
@@ -67,12 +71,15 @@ class ClienteController extends Controller
         $cliente->bio = $request->input('bio');
         $cliente->avatar = $namea; 
         $cliente->slug = $request->input('slug');
+        $relacion->job_id = $request->input('job_id');
+        $relacion->user_id = $request->input('user_id');
+
         //$empresa = Uxcamp\Empresa::find(1);
        //$cliente = Uxcamp\Cliente::find(1);
                 //$cliente->empresa_id;
         //$cliente->empresa->id = $request->input('');
         $cliente->save();
-
+        $relacion->save();
         
         return redirect()->route('cliente.index');
     }
