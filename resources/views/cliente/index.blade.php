@@ -35,15 +35,12 @@
                             <td scope="row">{{ $cliente->name }}</td>
                             <td scope="row">{{ $cliente->slug }}</td>
                             <td scope="row">{{ $cliente->bio }}</td>
+                            <td scope="row">{{ $relacion->job_id }}</td>
+                            <td scope="row">{{ $relacion->user_id }}</td>
                             <td scope="row"><a href="/cliente/{{$cliente->slug}}" class="btn btn-primary">More..</a></td>
                         </tr>
                         @endforeach
-                        @foreach($relaciones as $relacion)
-                        <tr>
-                            <td scope="row">{{ $relacion->job_id }}</td>
-                            <td scope="row">{{ $relacion->user_id }}</td>
-                        </tr>
-                        @endforeach
+
                         
                     </tbody>
                 </table>
