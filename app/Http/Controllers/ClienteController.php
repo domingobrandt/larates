@@ -21,6 +21,8 @@ class ClienteController extends Controller
     {
        //$request->user()->authorizeRoles(['admin','user']);
         //$clientes = Cliente::all();
+        $relacion = new clientes_empresas();
+
         if($request->ajax()){
             $clientes = Cliente::all();
             return response()->json($clientes, 200);
@@ -28,12 +30,16 @@ class ClienteController extends Controller
         $name  = $request->get('name');
         $slug = $request->get('slug');
         $bio   = $request->get('bio');
+
         $clientes = Cliente::orderBy('id', 'DESC')
         ->name($name)
         ->slug($slug)
         ->bio($bio)
         ->paginate(10);
-        return view('cliente.index', compact('clientes'));
+        $relacion->user_id = $request->get('user_id');
+        $relacion->job_id = $request->get('job_id');
+
+        return view('cliente.index', compact('clientes','relacion'));
     }
 
     /**

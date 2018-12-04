@@ -31,7 +31,7 @@
 
     <div class="form-group">
         {!!Form::label('job_id','Descripcion')!!}
-        {!!Form::select('job_id',$job_id,null,['class'=>'form-control'])!!}
+        {!!Form::text('job_id',$job_id,null,['class'=>'form-control'])!!}
     </div>
 
 {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
