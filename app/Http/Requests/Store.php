@@ -29,6 +29,8 @@ class Store extends FormRequest
                 'bio' =>'required',
                 'slug'=>'required',
                 'avatar'=>'required|image|mimes:jpeg,bmp,png',
+                'user_id'=>'required'
+
            ];
     }
 }

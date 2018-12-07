@@ -87,7 +87,7 @@ class ClienteController extends Controller
         $cliente->save();
         $relacion->save();
         
-        return redirect()->route('cliente.index');
+        return redirect()->route('cliente.index',compact('relacion'));
     }
 
     /**

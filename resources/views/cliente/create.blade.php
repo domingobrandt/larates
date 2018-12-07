@@ -23,15 +23,10 @@
             {!!Form::label('bio','Descripcion')!!}
             {!!Form::text('bio',null,['class'=>'form-control'])!!}
     </div>
- 
+
     <div class="form-group">
         {!!Form::label('avatar','Avatar')!!}
         {!!Form::file('avatar',['class' => 'btn btn-warning'])!!}
-    </div>
-
-    <div class="form-group">
-        {!!Form::label('job_id','Descripcion')!!}
-        {!!Form::text('job_id',$job_id,null,['class'=>'form-control'])!!}
     </div>
 
 {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
